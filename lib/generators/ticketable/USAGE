@@ -1,0 +1,9 @@
+Description:
+    Set as parameter the name of the resource that will create the ticket
+
+Example:
+    rails generate ticketable:install User
+
+    This will create:
+        /db/migrate/...create_ticket.rb
+        /app/model/ticket.rb
