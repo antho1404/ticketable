@@ -5,5 +5,5 @@ Example:
     rails generate ticketable:install User
 
     This will create:
-        /db/migrate/...create_ticket.rb
+        /db/migrate/create_ticket.rb
         /app/model/ticket.rb
