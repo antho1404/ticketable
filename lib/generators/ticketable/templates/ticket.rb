@@ -4,7 +4,9 @@ class Ticket < ActiveRecord::Base
   attr_accessible :status, :content, :ticketable
   attr_accessible :<%= name.singularize.downcase %>_id
 
-  [:open, :in_progress, :close].each_with_index do |status, i|
+  STATUS = [:open, :in_progress, :close] 
+
+  Ticket::STATUS.each_with_index do |status, i|
     define_method "is_#{status.to_s}?" do
       self.status == i
     end
