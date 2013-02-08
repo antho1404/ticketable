@@ -4,6 +4,8 @@ class Ticket < ActiveRecord::Base
   attr_accessible :status, :content, :ticketable
   attr_accessible :<%= name.singularize.downcase %>_id
 
+  validates_presence_of :<%= name.singularize.downcase %>_id
+
   STATUS = [:open, :in_progress, :close] 
 
   Ticket::STATUS.each_with_index do |status, i|
