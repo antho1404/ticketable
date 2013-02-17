@@ -2,6 +2,7 @@ class CreateTickets < ActiveRecord::Migration
   def change
     create_table :tickets do |t|
       t.references :<%= name.singularize.downcase %>, null: false
+      t.string :action
       t.integer :status, default: 0
       t.text :content
       t.references :ticketable, polymorphic: true
